@@ -1,0 +1,32 @@
+# Compiled Go binary
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go build/dependency directories
+/bin/
+/pkg/
+/vendor/
+/go.sum
+/go.mod
+
+# System files
+.DS_Store
+Thumbs.db
+
+# PostgreSQL data directory
+/data/
+
+# Log files
+*.log
+
+# Configuration files (for local development, these might include secrets)
+/config.json
+
+# Compiled application binaries or artifacts
+/app
+
+# Temporary files or directories
+/tmp/
