@@ -8,7 +8,7 @@ import (
 )
 
 func Add_Product(c *gin.Context) {
-	var users []models.User
+	var users []models.Product
 	config.DB.Find(&users)
 	c.JSON(200, &users)
 }

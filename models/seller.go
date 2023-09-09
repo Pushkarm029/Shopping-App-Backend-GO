@@ -4,9 +4,9 @@ import (
 	"gorm.io/gorm"
 )
 
-type User struct {
+type Seller struct {
 	gorm.Model
 	Name     string `json:"name"`
-	Email    string `json:"email" gorm:"uniqueIndex"`
+	Email    string `json:"email"`
 	Password string `json:"password"`
 }
