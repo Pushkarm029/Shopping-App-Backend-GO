@@ -5,6 +5,7 @@ import (
 	sellerauth "amazon-backend/handlers/authentication/seller_auth"
 	userauth "amazon-backend/handlers/authentication/user_auth"
 	sellerhandler "amazon-backend/handlers/seller_handler"
+	userhandler "amazon-backend/handlers/user_handler"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -37,4 +38,7 @@ func initRoutes(r *gin.Engine) {
 	r.POST("/api/seller/login", sellerauth.Login)
 	r.POST("/api/seller/register", sellerauth.Register)
 	r.POST("/api/seller/addproduct", sellerhandler.AddProduct)
+	r.GET("/api/seller/getproduct", sellerhandler.Get_Product)
+	r.GET("/api/getallproducts", userhandler.Search_Product)
+	r.DELETE("/api/seller/delete", sellerhandler.RemoveProduct)
 }

@@ -21,9 +21,3 @@ func AddProduct(c *gin.Context) {
 	c.JSON(http.StatusCreated, gin.H{"message": "Product created successfully"})
 	return
 }
-
-// Name     string `json:"name"`
-// Stock    int    `json:"stock"`
-// Price    int    `json:"price"`
-// SellerId Seller `json:"sellerid"`
-// Category string `json:"category"`
