@@ -41,4 +41,5 @@ func initRoutes(r *gin.Engine) {
 	r.GET("/api/seller/getproduct", sellerhandler.Get_Product)
 	r.GET("/api/getallproducts", userhandler.Search_Product)
 	r.DELETE("/api/seller/delete", sellerhandler.RemoveProduct)
+	r.PUT("/api/seller/update", sellerhandler.Update_Product)
 }
