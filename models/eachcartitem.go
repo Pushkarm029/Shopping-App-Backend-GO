@@ -2,8 +2,9 @@ package models
 
 import "gorm.io/gorm"
 
-type eachCartItem struct {
+type EachCartItem struct {
 	gorm.Model
-	ProductID Product `json:"productid"`
+	Product   Product `json:"product" gorm:"foreignKey:ProductID"`
+	ProductID uint    `json:"productid"`
 	Quantity  int     `json:"quantity"`
 }

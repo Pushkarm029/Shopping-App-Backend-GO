@@ -6,5 +6,6 @@ import (
 
 type Inventory struct {
 	gorm.Model
-	ProductID Product `json:"productid"`
+	Product   Product `json:"product" gorm:"foreignKey:ProductID"`
+	ProductID uint    `json:"productid"`
 }

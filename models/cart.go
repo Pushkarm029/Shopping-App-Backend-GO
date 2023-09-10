@@ -4,6 +4,8 @@ import "gorm.io/gorm"
 
 type Cart struct {
 	gorm.Model
-	UserID    User           `json:"userid"`
-	CartItems []eachCartItem `json:"cartitems"`
+	User       User           `json:"user" gorm:"foreignKey:UserID"`
+	UserID     uint           `json:"userid"`
+	EachCartId uint           `json:"eachcartid"`
+	CartItems  []EachCartItem `json:"cartitems" gorm:"foreignKey:EachCartId"`
 }

@@ -36,4 +36,5 @@ func initRoutes(r *gin.Engine) {
 	r.POST("/api/user/register", userauth.Register)
 	r.POST("/api/seller/login", sellerauth.Login)
 	r.POST("/api/seller/register", sellerauth.Register)
+	r.POST("/api/seller/addproduct", sellerhandler.AddProduct)
 }
