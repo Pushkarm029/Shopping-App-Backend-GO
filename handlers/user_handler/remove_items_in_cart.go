@@ -10,7 +10,7 @@ import (
 )
 
 func Remove_Item_In_Cart(c *gin.Context) {
-	var cart *models.Cart
+	var cart models.Cart
 	productidStr := c.Query("productid")
 	productid, err := strconv.ParseUint(productidStr, 10, 64)
 	if err != nil {
@@ -23,7 +23,7 @@ func Remove_Item_In_Cart(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid userid"})
 		return
 	}
-	if err := config.DB.Where("ProductID = ?", productid).Where("UserID = ?", userid).Delete(&cart).Error; err != nil {
+	if err := config.DB.Where("product_id = ?", productid).Where("user_id = ?", userid).Delete(&cart).Error; err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to remove product from cart"})
 		return
 	}

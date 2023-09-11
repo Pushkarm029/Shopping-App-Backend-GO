@@ -11,11 +11,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// Users can search for products.
-
-// User can add items in cart
-// Remove items from cart
-
+// users can view cart
 // Users can view purchased items
 // Users can cancel orders.
 // Users can return or exchange items.
@@ -28,21 +24,9 @@ import (
 
 func main() {
 	config.Connect()
-	// for i := 0; i < 100; i++ {
-	// 	user := models.User{}
-	// 	err := faker.FakeData(&user)
-	// 	if err != nil {
-	// 		fmt.Println(err)
-	// 		return
-	// 	}
-	// 	config.DB.Save(&user)
-	// }
 	router := gin.Default()
-
 	router.Use(cors.Default())
-
 	initRoutes(router)
-
 	router.Run(":8080")
 }
 
@@ -59,4 +43,5 @@ func initRoutes(r *gin.Engine) {
 	r.PUT("/api/seller/update", sellerhandler.Update_Product)
 	r.POST("/api/user/addcart", userhandler.Add_Item_In_Cart)
 	r.DELETE("/api/user/removecart", userhandler.Remove_Item_In_Cart)
+	r.GET("/api/user/viewcart", userhandler.View_Item_In_Cart)
 }
