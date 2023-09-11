@@ -11,6 +11,21 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// Users can search for products.
+
+// User can add items in cart
+// Remove items from cart
+
+// Users can view purchased items
+// Users can cancel orders.
+// Users can return or exchange items.
+// Users can place orders.
+
+// Tech Stack
+// Go-Gin
+// PostgreSQL
+// NextTS or ReactTS
+
 func main() {
 	config.Connect()
 	// for i := 0; i < 100; i++ {
@@ -42,4 +57,6 @@ func initRoutes(r *gin.Engine) {
 	r.GET("/api/getallproducts", userhandler.Search_Product)
 	r.DELETE("/api/seller/delete", sellerhandler.RemoveProduct)
 	r.PUT("/api/seller/update", sellerhandler.Update_Product)
+	r.POST("/api/user/addcart", userhandler.Add_Item_In_Cart)
+	r.DELETE("/api/user/removecart", userhandler.Remove_Item_In_Cart)
 }
