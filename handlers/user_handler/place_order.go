@@ -31,6 +31,7 @@ func Place_Order(c *gin.Context) {
 			return
 		}
 		placeorder = models.Orders{
+			Status:    "Order Placed",
 			OrderDate: time.Now(),
 			UserID:    uint(userid),
 			SellerID:  product.SellerID,

@@ -14,7 +14,6 @@ import (
 // Users can view purchased items
 // Users can cancel orders.
 // Users can return or exchange items.
-// Users can place orders.
 
 // Tech Stack
 // Go-Gin
@@ -44,4 +43,5 @@ func initRoutes(r *gin.Engine) {
 	r.DELETE("/api/user/removecart", userhandler.Remove_Item_In_Cart)
 	r.GET("/api/user/viewcart", userhandler.View_Item_In_Cart)
 	r.GET("/api/user/placeorder", userhandler.Place_Order)
+	r.DELETE("/api/user/cancelorder", userhandler.Cancel_Order)
 }
