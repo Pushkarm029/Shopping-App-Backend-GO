@@ -3,6 +3,7 @@ package userhandler
 import (
 	"amazon-backend/config"
 	"amazon-backend/models"
+	"fmt"
 	"net/http"
 	"strconv"
 
@@ -10,7 +11,7 @@ import (
 )
 
 func View_Item_In_Cart(c *gin.Context) {
-	var cart models.Cart
+	var cart []models.Cart
 	useridStr := c.Query("userid")
 	userid, err := strconv.ParseUint(useridStr, 10, 64)
 	if err != nil {
@@ -21,6 +22,7 @@ func View_Item_In_Cart(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to get product from cart"})
 		return
 	}
+	fmt.Print(cart)
 	c.JSON(http.StatusCreated, cart)
 	return
 }
