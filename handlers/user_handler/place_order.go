@@ -30,6 +30,9 @@ func Place_Order(c *gin.Context) {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to get product from cart"})
 			return
 		}
+		if product.Stock <= 0 {
+			continue
+		}
 		placeorder = models.Orders{
 			Status:    "Order Placed",
 			OrderDate: time.Now(),
@@ -41,6 +44,7 @@ func Place_Order(c *gin.Context) {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to place order"})
 			return
 		}
+		product.Stock = product.Stock - 1
 		if err := config.DB.Where("product_id = ?", productiditer).Where("user_id = ?", userid).Delete(&cart).Error; err != nil {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to remove product from cart"})
 			return

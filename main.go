@@ -11,8 +11,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// Users can view purchased items
-// Users can cancel orders.
+// Clean Outputs
 // Users can return or exchange items.
 
 // Tech Stack
@@ -42,6 +41,7 @@ func initRoutes(r *gin.Engine) {
 	r.POST("/api/user/addcart", userhandler.Add_Item_In_Cart)
 	r.DELETE("/api/user/removecart", userhandler.Remove_Item_In_Cart)
 	r.GET("/api/user/viewcart", userhandler.View_Item_In_Cart)
-	r.GET("/api/user/placeorder", userhandler.Place_Order)
+	r.POST("/api/user/placeorder", userhandler.Place_Order)
 	r.DELETE("/api/user/cancelorder", userhandler.Cancel_Order)
+	r.GET("/api/user/vieworder", userhandler.View_Purchased_Items)
 }
