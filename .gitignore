@@ -1,18 +1,12 @@
-# Compiled Go binary
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
+*.test
+*.out
+go.work
 
-# Go build/dependency directories
-/bin/
-/pkg/
-/vendor/
-/go.sum
-/go.mod
-
-# System files
 .DS_Store
 Thumbs.db
 
@@ -30,3 +24,4 @@ Thumbs.db
 
 # Temporary files or directories
 /tmp/
+.env

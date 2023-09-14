@@ -11,13 +11,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// Clean Outputs
-// Users can return or exchange items.
-
-// Tech Stack
-// Go-Gin
-// PostgreSQL
-// NextTS or ReactTS
 
 func main() {
 	config.Connect()
@@ -28,7 +21,6 @@ func main() {
 }
 
 func initRoutes(r *gin.Engine) {
-	r.GET("/api/products", sellerhandler.Get_Product)
 	r.POST("/api/user/login", userauth.Login)
 	r.POST("/api/user/register", userauth.Register)
 	r.POST("/api/seller/login", sellerauth.Login)

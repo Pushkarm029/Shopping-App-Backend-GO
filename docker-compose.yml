@@ -10,3 +10,23 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=postgres
+#     networks:
+#       - my_network
+
+#   backend:
+#     build:
+#       context: ./
+#       dockerfile: Dockerfile
+#     container_name: backend
+#     ports:
+#       - "${BACKEND_PORT}:${BACKEND_PORT}"
+#     depends_on: 
+#       - db
+#     environment:
+#       - BACKEND_PORT=${BACKEND_PORT}
+#     networks:
+#       - my_network
+
+# networks:
+#   my_network:
+#     driver: bridge

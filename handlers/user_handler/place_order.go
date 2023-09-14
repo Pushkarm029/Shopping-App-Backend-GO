@@ -3,6 +3,7 @@ package userhandler
 import (
 	"amazon-backend/config"
 	"amazon-backend/models"
+	"fmt"
 	"net/http"
 	"strconv"
 	"time"
@@ -22,8 +23,11 @@ func Place_Order(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to get cart for the user"})
 		return
 	}
+	fmt.Print(cart)
 	for _, item := range cart {
+		fmt.Print("1")
 		productiditer := item.ProductID
+		fmt.Print(productiditer)
 		var placeorder models.Orders
 		var product models.Product
 		if err := config.DB.Where("id = ?", productiditer).First(&product).Error; err != nil {
@@ -45,10 +49,10 @@ func Place_Order(c *gin.Context) {
 			return
 		}
 		product.Stock = product.Stock - 1
-		if err := config.DB.Where("product_id = ?", productiditer).Where("user_id = ?", userid).Delete(&cart).Error; err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to remove product from cart"})
-			return
-		}
+	}
+	if err := config.DB.Where("user_id = ?", userid).Delete(&cart).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to remove product from cart"})
+		return
 	}
 	c.JSON(http.StatusOK, gin.H{"message": "Orders placed successfully"})
 }
