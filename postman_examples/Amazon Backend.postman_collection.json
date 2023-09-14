@@ -1,0 +1,1301 @@
+{
+	"info": {
+		"_postman_id": "35df5d66-8e66-4c97-9a25-d3538d8a3a31",
+		"name": "Amazon Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27920224"
+	},
+	"item": [
+		{
+			"name": "user_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"pm@gmail.com\",\r\n    \"password\": \"Test#029\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user_login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"test@gmail.com\",\r\n    \"password\": \"Test#029\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 11:43:20 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Login successful\"\n}"
+				},
+				{
+					"name": "user_login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"pm@gmail.com\",\r\n    \"password\": \"Test#029\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 11:43:38 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Invalid password\"\n}"
+				}
+			]
+		},
+		{
+			"name": "user_register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Admain\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"Admin#029\",\r\n    \"address\": \"Delhi96\",\r\n    \"contact\": \"95609976575\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user_register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Admain\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"Admin#029\",\r\n    \"address\": \"Delhi96\",\r\n    \"contact\": \"95609976575\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 11:44:22 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User created successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Seller_Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"seller@gmail.com\",\r\n    \"password\": \"Pushkarm\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/seller/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"seller",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"seller@gmail.com\",\r\n    \"password\": \"Pushkarm\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/seller/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seller",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 11:47:08 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Login successful\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Register_Seller",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"seller1\",\r\n    \"email\": \"seller@gmail.com\",\r\n    \"password\": \"Pushkarm\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/seller/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"seller",
+						"register"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register_Seller",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"seller1\",\r\n    \"email\": \"seller@gmail.com\",\r\n    \"password\": \"Pushkarm\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/seller/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seller",
+								"register"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 11:45:05 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"seller created successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add_Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"chili flakes\",\r\n    \"stock\": 6330,\r\n    \"price\": 49,\r\n    \"sellerid\": 2,\r\n    \"category\": \"eatables\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/seller/addproduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"seller",
+						"addproduct"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add_Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"chili flakes\",\r\n    \"stock\": 6330,\r\n    \"price\": 49,\r\n    \"sellerid\": 2,\r\n    \"category\": \"eatables\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/seller/addproduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seller",
+								"addproduct"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 11:53:36 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Product created successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get_Product_Seller",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/seller/getproduct?sellerid=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"seller",
+						"getproduct"
+					],
+					"query": [
+						{
+							"key": "sellerid",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get_Product_Seller",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/seller/getproduct?sellerid=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seller",
+								"getproduct"
+							],
+							"query": [
+								{
+									"key": "sellerid",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 11:53:03 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1728"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 2,\n        \"CreatedAt\": \"2023-09-10T13:58:17.815901+05:30\",\n        \"UpdatedAt\": \"2023-09-10T13:58:17.815901+05:30\",\n        \"DeletedAt\": null,\n        \"name\": \"biscuit\",\n        \"stock\": 100000,\n        \"price\": 10,\n        \"sellerid\": 2,\n        \"seller\": {\n            \"ID\": 2,\n            \"CreatedAt\": \"2023-09-10T13:57:56.843695+05:30\",\n            \"UpdatedAt\": \"2023-09-10T13:57:56.843695+05:30\",\n            \"DeletedAt\": null,\n            \"name\": \"pm\",\n            \"email\": \"pm@gmail.com\",\n            \"password\": \"$2a$10$l5.EVV2anJ9LQqoRVxODkuNHhQwmHpxq2x5KFB7CekWTWN6YHhMVi\"\n        },\n        \"category\": \"eatables\"\n    },\n    {\n        \"ID\": 4,\n        \"CreatedAt\": \"2023-09-10T15:20:34.440348+05:30\",\n        \"UpdatedAt\": \"2023-09-10T16:53:00.013782+05:30\",\n        \"DeletedAt\": null,\n        \"name\": \"Xbox\",\n        \"stock\": 53,\n        \"price\": 50,\n        \"sellerid\": 2,\n        \"seller\": {\n            \"ID\": 2,\n            \"CreatedAt\": \"2023-09-10T13:57:56.843695+05:30\",\n            \"UpdatedAt\": \"2023-09-10T13:57:56.843695+05:30\",\n            \"DeletedAt\": null,\n            \"name\": \"pm\",\n            \"email\": \"pm@gmail.com\",\n            \"password\": \"$2a$10$l5.EVV2anJ9LQqoRVxODkuNHhQwmHpxq2x5KFB7CekWTWN6YHhMVi\"\n        },\n        \"category\": \"gaming\"\n    },\n    {\n        \"ID\": 5,\n        \"CreatedAt\": \"2023-09-10T15:20:54.076825+05:30\",\n        \"UpdatedAt\": \"2023-09-10T16:51:54.32562+05:30\",\n        \"DeletedAt\": null,\n        \"name\": \"PS5\",\n        \"stock\": 45453,\n        \"price\": 25,\n        \"sellerid\": 2,\n        \"seller\": {\n            \"ID\": 2,\n            \"CreatedAt\": \"2023-09-10T13:57:56.843695+05:30\",\n            \"UpdatedAt\": \"2023-09-10T13:57:56.843695+05:30\",\n            \"DeletedAt\": null,\n            \"name\": \"pm\",\n            \"email\": \"pm@gmail.com\",\n            \"password\": \"$2a$10$l5.EVV2anJ9LQqoRVxODkuNHhQwmHpxq2x5KFB7CekWTWN6YHhMVi\"\n        },\n        \"category\": \"gaming\"\n    },\n    {\n        \"ID\": 6,\n        \"CreatedAt\": \"2023-09-11T14:33:58.954203+05:30\",\n        \"UpdatedAt\": \"2023-09-11T14:33:58.954203+05:30\",\n        \"DeletedAt\": null,\n        \"name\": \"chili flakes\",\n        \"stock\": 0,\n        \"price\": 49,\n        \"sellerid\": 2,\n        \"seller\": {\n            \"ID\": 2,\n            \"CreatedAt\": \"2023-09-10T13:57:56.843695+05:30\",\n            \"UpdatedAt\": \"2023-09-10T13:57:56.843695+05:30\",\n            \"DeletedAt\": null,\n            \"name\": \"pm\",\n            \"email\": \"pm@gmail.com\",\n            \"password\": \"$2a$10$l5.EVV2anJ9LQqoRVxODkuNHhQwmHpxq2x5KFB7CekWTWN6YHhMVi\"\n        },\n        \"category\": \"eatables\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get_All_Product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sq\" : \"biscuit\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/getallproducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"getallproducts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get_All_Product",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sq\": \"biscuit\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/getallproducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"getallproducts"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 11:54:33 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "339"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 2,\n        \"CreatedAt\": \"2023-09-10T13:58:17.815901+05:30\",\n        \"UpdatedAt\": \"2023-09-10T13:58:17.815901+05:30\",\n        \"DeletedAt\": null,\n        \"name\": \"biscuit\",\n        \"stock\": 100000,\n        \"price\": 10,\n        \"sellerid\": 2,\n        \"seller\": {\n            \"ID\": 0,\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"name\": \"\",\n            \"email\": \"\",\n            \"password\": \"\"\n        },\n        \"category\": \"eatables\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Delete_Product_Seller",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/seller/delete?productid=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"seller",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "productid",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete_Product_Seller",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/seller/delete?productid=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seller",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "productid",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 11:54:51 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Product Deleted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update_Seller",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Xbox\",\r\n    \"stock\": 6000,\r\n    \"price\": 50,\r\n    \"category\": \"gaming\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/seller/update?productid=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"seller",
+						"update"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "productid",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update_Seller",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Xbox\",\r\n    \"stock\": 6000,\r\n    \"price\": 50,\r\n    \"category\": \"gaming\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/seller/update?productid=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"seller",
+								"update"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "productid",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 11:55:25 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Product updated successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add_in_cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/addcart?productid=4&userid=12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"addcart"
+					],
+					"query": [
+						{
+							"key": "productid",
+							"value": "4"
+						},
+						{
+							"key": "userid",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add_in_cart",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/addcart?productid=6&userid=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"addcart"
+							],
+							"query": [
+								{
+									"key": "productid",
+									"value": "6"
+								},
+								{
+									"key": "userid",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 11:55:55 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Product added successfully in cart\"\n}"
+				}
+			]
+		},
+		{
+			"name": "remove_in_cart",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/removecart?productid=5&userid=12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"removecart"
+					],
+					"query": [
+						{
+							"key": "productid",
+							"value": "5"
+						},
+						{
+							"key": "userid",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "remove_in_cart",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/removecart?productid=5&userid=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"removecart"
+							],
+							"query": [
+								{
+									"key": "productid",
+									"value": "5"
+								},
+								{
+									"key": "userid",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 11:56:09 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Product removed successfully from cart\"\n}"
+				}
+			]
+		},
+		{
+			"name": "view_cart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/viewcart?userid=12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"viewcart"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "view_cart",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/viewcart?userid=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"viewcart"
+							],
+							"query": [
+								{
+									"key": "userid",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 11:56:18 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1319"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 10,\n        \"CreatedAt\": \"2023-09-13T00:55:05.353839+05:30\",\n        \"UpdatedAt\": \"2023-09-13T00:55:05.353839+05:30\",\n        \"DeletedAt\": null,\n        \"user\": {\n            \"ID\": 0,\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"name\": \"\",\n            \"email\": \"\",\n            \"password\": \"\",\n            \"address\": \"\",\n            \"contact\": \"\"\n        },\n        \"userid\": 12,\n        \"product\": {\n            \"ID\": 6,\n            \"CreatedAt\": \"2023-09-11T14:33:58.954203+05:30\",\n            \"UpdatedAt\": \"2023-09-11T14:33:58.954203+05:30\",\n            \"DeletedAt\": null,\n            \"name\": \"chili flakes\",\n            \"stock\": 0,\n            \"price\": 49,\n            \"sellerid\": 2,\n            \"seller\": {\n                \"ID\": 0,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null,\n                \"name\": \"\",\n                \"email\": \"\",\n                \"password\": \"\"\n            },\n            \"category\": \"eatables\"\n        },\n        \"productid\": 6\n    },\n    {\n        \"ID\": 11,\n        \"CreatedAt\": \"2023-09-14T17:25:54.044601+05:30\",\n        \"UpdatedAt\": \"2023-09-14T17:25:54.044601+05:30\",\n        \"DeletedAt\": null,\n        \"user\": {\n            \"ID\": 0,\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"name\": \"\",\n            \"email\": \"\",\n            \"password\": \"\",\n            \"address\": \"\",\n            \"contact\": \"\"\n        },\n        \"userid\": 12,\n        \"product\": {\n            \"ID\": 6,\n            \"CreatedAt\": \"2023-09-11T14:33:58.954203+05:30\",\n            \"UpdatedAt\": \"2023-09-11T14:33:58.954203+05:30\",\n            \"DeletedAt\": null,\n            \"name\": \"chili flakes\",\n            \"stock\": 0,\n            \"price\": 49,\n            \"sellerid\": 2,\n            \"seller\": {\n                \"ID\": 0,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null,\n                \"name\": \"\",\n                \"email\": \"\",\n                \"password\": \"\"\n            },\n            \"category\": \"eatables\"\n        },\n        \"productid\": 6\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Place_Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/placeorder?userid=12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"placeorder"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Place_Order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/placeorder?userid=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"placeorder"
+							],
+							"query": [
+								{
+									"key": "userid",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 11:56:29 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Orders placed successfully\"\n}"
+				},
+				{
+					"name": "Place_Order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/placeorder?userid=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"placeorder"
+							],
+							"query": [
+								{
+									"key": "userid",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 12:13:57 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Orders placed successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "CancelOrder",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/cancelorder?userid=12&productid=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"cancelorder"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "12"
+						},
+						{
+							"key": "productid",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CancelOrder",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/cancelorder?userid=12&productid=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"cancelorder"
+							],
+							"query": [
+								{
+									"key": "userid",
+									"value": "12"
+								},
+								{
+									"key": "productid",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 12:08:40 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Cancelled Order Successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GetOrders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/vieworder?userid=12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"vieworder"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetOrders",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/vieworder?userid=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"vieworder"
+							],
+							"query": [
+								{
+									"key": "userid",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Sep 2023 12:14:32 GMT"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 11,\n        \"CreatedAt\": \"2023-09-13T00:47:41.595241+05:30\",\n        \"UpdatedAt\": \"2023-09-13T00:47:41.595241+05:30\",\n        \"DeletedAt\": null,\n        \"orderdate\": \"2023-09-13T00:47:41.594702+05:30\",\n        \"status\": \"Order Placed\",\n        \"userid\": 12,\n        \"user\": {\n            \"ID\": 0,\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"name\": \"\",\n            \"email\": \"\",\n            \"password\": \"\",\n            \"address\": \"\",\n            \"contact\": \"\"\n        },\n        \"sellerid\": 2,\n        \"seller\": {\n            \"ID\": 0,\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"name\": \"\",\n            \"email\": \"\",\n            \"password\": \"\"\n        },\n        \"productid\": 5,\n        \"product\": {\n            \"ID\": 5,\n            \"CreatedAt\": \"2023-09-10T15:20:54.076825+05:30\",\n            \"UpdatedAt\": \"2023-09-10T16:51:54.32562+05:30\",\n            \"DeletedAt\": null,\n            \"name\": \"PS5\",\n            \"stock\": 45453,\n            \"price\": 25,\n            \"sellerid\": 2,\n            \"seller\": {\n                \"ID\": 0,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null,\n                \"name\": \"\",\n                \"email\": \"\",\n                \"password\": \"\"\n            },\n            \"category\": \"gaming\"\n        }\n    },\n    {\n        \"ID\": 13,\n        \"CreatedAt\": \"2023-09-13T00:55:20.423945+05:30\",\n        \"UpdatedAt\": \"2023-09-13T00:55:20.423945+05:30\",\n        \"DeletedAt\": null,\n        \"orderdate\": \"2023-09-13T00:55:20.423185+05:30\",\n        \"status\": \"Order Placed\",\n        \"userid\": 12,\n        \"user\": {\n            \"ID\": 0,\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"name\": \"\",\n            \"email\": \"\",\n            \"password\": \"\",\n            \"address\": \"\",\n            \"contact\": \"\"\n        },\n        \"sellerid\": 2,\n        \"seller\": {\n            \"ID\": 0,\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"name\": \"\",\n            \"email\": \"\",\n            \"password\": \"\"\n        },\n        \"productid\": 4,\n        \"product\": {\n            \"ID\": 4,\n            \"CreatedAt\": \"2023-09-10T15:20:34.440348+05:30\",\n            \"UpdatedAt\": \"2023-09-14T17:25:23.556619+05:30\",\n            \"DeletedAt\": null,\n            \"name\": \"Xbox\",\n            \"stock\": 6000,\n            \"price\": 50,\n            \"sellerid\": 2,\n            \"seller\": {\n                \"ID\": 0,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null,\n                \"name\": \"\",\n                \"email\": \"\",\n                \"password\": \"\"\n            },\n            \"category\": \"gaming\"\n        }\n    },\n    {\n        \"ID\": 14,\n        \"CreatedAt\": \"2023-09-14T17:43:55.461655+05:30\",\n        \"UpdatedAt\": \"2023-09-14T17:43:55.461655+05:30\",\n        \"DeletedAt\": null,\n        \"orderdate\": \"2023-09-14T17:43:55.461068+05:30\",\n        \"status\": \"Order Placed\",\n        \"userid\": 12,\n        \"user\": {\n            \"ID\": 0,\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"name\": \"\",\n            \"email\": \"\",\n            \"password\": \"\",\n            \"address\": \"\",\n            \"contact\": \"\"\n        },\n        \"sellerid\": 2,\n        \"seller\": {\n            \"ID\": 0,\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DeletedAt\": null,\n            \"name\": \"\",\n            \"email\": \"\",\n            \"password\": \"\"\n        },\n        \"productid\": 5,\n        \"product\": {\n            \"ID\": 5,\n            \"CreatedAt\": \"2023-09-10T15:20:54.076825+05:30\",\n            \"UpdatedAt\": \"2023-09-10T16:51:54.32562+05:30\",\n            \"DeletedAt\": null,\n            \"name\": \"PS5\",\n            \"stock\": 45453,\n            \"price\": 25,\n            \"sellerid\": 2,\n            \"seller\": {\n                \"ID\": 0,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null,\n                \"name\": \"\",\n                \"email\": \"\",\n                \"password\": \"\"\n            },\n            \"category\": \"gaming\"\n        }\n    }\n]"
+				}
+			]
+		}
+	]
+}
